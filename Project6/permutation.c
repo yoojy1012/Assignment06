@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(int argc, char* argv[]) {
 
@@ -19,4 +20,6 @@ int main(int argc, char* argv[]) {
 		fputs(str, fp2);
 	}
 
+	int nNumber = fgets(str, 10, fp1);
+	int* pChar = (int*)calloc(nNumber, sizeof(char));
 }
