@@ -1,9 +1,6 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
-
-void swap(int* a, int* b);
-void print_arr();
-void permutation(int n, int r);
 
 int main(int argc, char* argv[]) {
 
