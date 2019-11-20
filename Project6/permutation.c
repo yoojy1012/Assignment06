@@ -14,4 +14,9 @@ int main(int argc, char* argv[]) {
 		return 0;
 	}
 
+	while (fgets(str, sizeof(str), fp1)) {
+		printf("%s\n", str);
+		fputs(str, fp2);
+	}
+
 }
