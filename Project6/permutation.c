@@ -1,10 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void swap(int* a, int* b);
+void print_arr();
+void permutation(int n, int r);
+
 int main(int argc, char* argv[]) {
 
 	FILE* fp1, * fp2;
-	char str[64];
+	char str[100];
 
 	if ((fp1 = fopen("argv[1]", "r")) == NULL) {
 		printf("failed to open file.");
@@ -15,11 +19,16 @@ int main(int argc, char* argv[]) {
 		return 0;
 	}
 
-	while (fgets(str, sizeof(str), fp1)) {
-		printf("%s\n", str);
-		fputs(str, fp2);
+	int nNumber = fgets(str, 10, fp1);
+	int* pChar = (int*)calloc(nNumber, sizeof(int));
+
+	for (int i = 0; i < nNumber; i++)
+	{
+		fgets(str[i], sizeof(str), fp1);
 	}
 
-	int nNumber = fgets(str, 10, fp1);
-	int* pChar = (int*)calloc(nNumber, sizeof(char));
+	for (int i = 0; i < sizeof(str) / sizeof(char); i++)
+	{
+		printf("%d\n", str[i]);
+	}
 }
